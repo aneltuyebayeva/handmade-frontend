@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# HANDMADE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+An e-commerce website that allows users to buy exclusive, unique and handmade ONLY products.
 
-In the project directory, you can run:
+## User Stories
 
-### `yarn start`
+1. When I first visit the site, I'm on a home page that has all products displayed.
+2. When not logged in, I see links to home, signup & login only. If I were to visit any of these routes manually while logged in, I would get redirected to the home page.
+3. I can create an account, log in, and log out.
+4. When logged in, I see links to home, logout, My Cart, and My Orders.
+5. The Home page lists the names of all available products. Clicking on any product name takes me to its details page, which include a name, description, image, and price. The products are pre-seeded in the db. In the Product Details page is an Add To Cart button, which saves the product in my cart. 
+6. When I'm in My cart page, I see list of products I added. I see checkout button, when I click on it I need to input shipping address and CC number.
+7. After I purchaseed products I can see the order list in My orders page. When I click on order I can see the details of the order, products and total amount.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Wireframes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![alt text](./assets/wireframe1.png)
+![alt text](./assets/wireframe2.png)
+![alt text](./assets/wireframe3.png)
 
-### `yarn test`
+## Component diagram
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ERD
 
-### `yarn build`
+![alt text](./assets/erd.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Routes Inventory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|Method|Path|Description|
+|---|---|---|
+|POST|/users/signup|create new user|
+|POST|/users/login|user login|
+|GET|/users/verify|user verify|
+|POST|/users/cart|add products in cart|
+|GET|/users/cart|show products in cart|
+|DELETE|/users/cart/:id|remove product from cart|
+|GET|/products/:id|show single product|
+|GET|/products|show all products|
+|POST|/orders|create new order|
+|GET|/orders/:id|show single order details|
+|GET|/orders|show my orders|
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## MVP 
 
-### `yarn eject`
+1. Create database, tables, associations, routes.
+2. User auth
+3. Sign up, Login forms, Logout
+4. Home page with list of all products.
+5. Add to cart
+6. See products that was added into the cart
+7. Checkout form
+8. My orders page to see list of all orders.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Stretch goals
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Implement payment system, maybe stripe or paypal.
+2. Have multiple sellers.
+3. Sellers can add, update or delete product.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
