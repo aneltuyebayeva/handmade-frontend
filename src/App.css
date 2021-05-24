@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+.logoHome {
+    height: 500px;
+    width: 650px;
+    background: url("https://i.imgur.com/a46x8Ru.png");
+    background-size: cover;
+}
+
+.homeSectionTop {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+}
+
+.backgroundHome {
+    height: 500px;
+    width: 650px;
+    background: url("https://i.imgur.com/LcYtuUg.jpg");
+    background-size: cover;
+}
+
+.navbar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navLinks a {
+    padding: 20px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+    color: solid black;
+    text-decoration: none;
+}
+.navLinks a:hover {
+    transition: box-shadow .15s;
+    color: solid white;
+    background: rgb(118, 129, 91);
+    box-shadow: 0px 4px 0px 0px rgb(70, 79, 49);
+}
+
+.footer {
+    height: 40px;
+    width: 100%;
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 12px;
+}
+
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 2% auto;
+    margin-bottom: 80px;
+}
+
+.singleProduct {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    padding: 40px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.thumbnail {
+    width: 110%;
+    height: 120%;
+  }
+  
+.productImage {
+    height: 150px;
+    width: 150px;
+  }
+  
+.productName {
+    margin-top: 40px;
+  }
+
+.allProductsButtonSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.allProductsButton {
+    height: 40px;
+    width: 180px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+}
+
+.singleProductContainer {
+    display: flex;
+    margin-top: 40px;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.image {
+    margin-top: 20px;;
+}
+
+.singleRight {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 500px;
+}
+
+.singleLeft {
+    height: 100%;
+    width: 500px;
+    margin-left: 20px;
+}
+
+.addToCartButton {
+    margin-top: 30px;
+    height: 40px;
+    width: 180px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+}
+
+.backToAllButton {
+    height: 40px;
+    width: 200px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 370px;
+    width: 480px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.signupPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Philosopher', sans-serif;
+    background: url("https://i.imgur.com/INhCLYa.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.inputForm {
+    margin: 20px;
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.headerForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 300px;
+}
+
+.headerForm a {
+    text-decoration: none;
+}
+
+.signupButton {
+    height: 40px;
+    width: 150px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+}
+
+.loginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Philosopher', sans-serif;
+    background: url("https://i.imgur.com/INhCLYa.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 370px;
+    width: 480px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.loginButton {
+    height: 40px;
+    width: 150px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+}
+

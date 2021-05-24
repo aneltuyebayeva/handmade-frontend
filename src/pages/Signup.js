@@ -2,7 +2,7 @@ import {useState} from 'react'
 import axios from 'axios'
 import { useContext } from 'react'
 import { UserContext } from '../context/UserContext'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
 const Signup = () => {
     const [name, setName] = useState ('')
@@ -29,11 +29,14 @@ const Signup = () => {
         { shouldRedirect && <Redirect to={`/dashboard`} exact /> }
        
        <form className="signupForm" onSubmit={submitForm}>
-          <h2>Sign up</h2> 
+          <div className="headerForm">
+            <p><Link to="/signup">Sign Up</Link></p> 
+            <p><Link to="/login">Login</Link></p> 
+          </div>
                <input className="inputForm" placeholder="Name" value={name} onChange ={(e) => setName(e.target.value)} />
                <input className="inputForm" placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
                <input className="inputForm" placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-               <input className="button" type="submit" value = "Sign Up"/> 
+               <input className="signupButton" type="submit" value = "Sign Up"/> 
        </form>
       </div>
     )

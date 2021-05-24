@@ -15,13 +15,16 @@ return (
     <div className="headerSection">  
         <div>
             <nav className="navbar">
+            <span className="navLinks">
+                <Link to="/">Home</Link>
+                </span>
             {localStorage.getItem('userId') ?     
             <span>
                 <span className="navLinks">
-                <Link to="/mycart">My cart</Link>{' | '}
+                <Link to="/mycart">Cart</Link>
                 </span>
                 <span className="navLinks">
-                <Link to="/myorders">My orders</Link>{' | '}
+                <Link to="/myorders">My orders</Link>
                 </span>
                 <span className="navLinks">
                 <Link to=" " onClick ={(e) => {
@@ -35,10 +38,7 @@ return (
             :
             <span>
                 <span className="navLinks">
-                <Link to="/">Home</Link>{' | '}
-                </span>
-                <span className="navLinks">
-                <Link to="/signup">Sign Up</Link>{' | '}
+                <Link to="/signup">Sign Up</Link>
                 </span>
                 <span className="navLinks">
                 <Link to="/login">Login</Link>

@@ -7,6 +7,8 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
+import AllProducts from './pages/AllProducts';
+import SingleProduct from './pages/SingleProduct';
 
 function App() {
 const { userState, fetchUser } = useContext(UserContext)
@@ -35,6 +37,18 @@ const [user, setUser] = userState
           return <Login />
         }
       }}  />
+      <Route path="/products" exact
+        render={() => {
+          return <AllProducts />
+        }}
+      /> 
+      <Route
+        path="/products/:id"
+        exact
+        render={(routingInfo) => {
+          return <SingleProduct id={routingInfo.match.params.id} />
+        }}
+      />  
 
     </div>
   );

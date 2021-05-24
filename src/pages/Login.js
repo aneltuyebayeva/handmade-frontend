@@ -2,7 +2,7 @@ import {useState} from 'react'
 import axios from 'axios'
 import { useContext } from 'react'
  import { UserContext } from '../context/UserContext'
- import {Redirect} from 'react-router-dom'
+ import {Redirect, Link} from 'react-router-dom'
 
 const Login = () => {
   const [email, setEmail] = useState ('')
@@ -25,13 +25,15 @@ const Login = () => {
 
   return (
     <div className="loginPage">
-    { shouldRedirect && <Redirect to={`/dashboard`} exact /> }
+    { shouldRedirect && <Redirect to={`/`} exact /> }
      <form className ="loginForm" onSubmit={loginForm}>
-          <h2>Login</h2>
-           
+          <div className="headerForm">
+            <p><Link to="/signup">Sign Up</Link></p> 
+            <p><Link to="/login">Login</Link></p> 
+          </div>
              <input className="inputForm" placeholder="Email" value={email} onChange ={(e) => setEmail(e.target.value)} />
              <input className="inputForm" placeholder="Password" value={password} onChange ={(e) => setPassword(e.target.value)} />
-             <input className="button" type="submit" value = "Login!"/>
+             <input className="loginButton" type="submit" value = "Login!"/>
          
      </form>
     </div>
