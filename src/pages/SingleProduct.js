@@ -27,10 +27,10 @@ const SingleProduct = (props) => {
     useEffect(fetchSingleProduct, [shouldReload])
 
     const addToCart = (e) => {
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/cart`, {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/carts`, {
             productId: product.id
         },
-            {headers: { 
+            { headers: { 
                     Authorization: localStorage.getItem('userId')
                 }
           })

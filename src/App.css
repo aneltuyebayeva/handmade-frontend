@@ -80,6 +80,7 @@
   
 .productName {
     margin-top: 40px;
+    text-align: center;
   }
 
 .allProductsButtonSection {
@@ -257,7 +258,6 @@
     text-decoration: none;
 }
 
-.productName {
-    text-align: center;
-}
+
+
 
