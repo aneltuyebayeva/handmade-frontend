@@ -36,8 +36,8 @@
 .navLinks a:hover {
     transition: box-shadow .15s;
     color: solid white;
-    background: rgb(118, 129, 91);
-    box-shadow: 0px 4px 0px 0px rgb(70, 79, 49);
+    background: rgb(204,220,193);
+    box-shadow: 0px 4px 0px 0px rgb(119,137,121);
 }
 
 .footer {
@@ -94,6 +94,15 @@
     width: 180px;
     font-family: 'Philosopher', sans-serif;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.allProductsButton a {
+    text-decoration: none;
+}
+
+.allProductsButton:hover {
+    background: rgb(204,220,193);
 }
 
 .singleProductContainer {
@@ -126,6 +135,11 @@
     width: 180px;
     font-family: 'Philosopher', sans-serif;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.addToCartButton:hover {
+    background: rgb(204,220,193);
 }
 
 .backToAllButton {
@@ -133,6 +147,11 @@
     width: 200px;
     font-family: 'Philosopher', sans-serif;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.backToAllButton:hover {
+    background: rgb(204,220,193);
 }
 
 .signupForm {
@@ -174,6 +193,14 @@
     width: 300px;
 }
 
+.headerForm p {
+    cursor: pointer;
+}
+
+.headerForm a:hover {
+    color: rgb(119,137,121);
+}
+
 .headerForm a {
     text-decoration: none;
 }
@@ -183,6 +210,11 @@
     width: 150px;
     font-family: 'Philosopher', sans-serif;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.signupButton:hover {
+    background: rgb(204,220,193);
 }
 
 .loginPage {
@@ -214,5 +246,18 @@
     width: 150px;
     font-family: 'Philosopher', sans-serif;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.loginButton:hover{
+    background: rgb(204,220,193);
+}
+
+.productName a {
+    text-decoration: none;
+}
+
+.productName {
+    text-align: center;
 }
 

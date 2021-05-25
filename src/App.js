@@ -18,38 +18,33 @@ const [user, setUser] = userState
   return (
     <div className="App">
       <Navbar />
-      <Route path="/" exact
-        render={() => {
+      <Route path="/" exact render={() => {
           return <Home />
-        }}
-      />
+      }}/>
       <Route path="/signup" render = {() => {
         if (user.id) {
           return <Redirect to="/" exact />
         } else {
           return <Signup />
         }
-      }}  />
+      }}/>
       <Route path="/login" render = {() => {
         if (user.id) {
           return <Redirect to="/" exact />
         } else {
           return <Login />
         }
-      }}  />
-      <Route path="/products" exact
-        render={() => {
-          return <AllProducts />
-        }}
-      /> 
-      <Route
-        path="/products/:id"
-        exact
-        render={(routingInfo) => {
+      }}/>
+      <Route path="/products" exact render={() => {
+        if (user.id) {
+          return <AllProducts />          
+        } else {
+          return <Redirect to="/" exact />         
+        }
+      }}/> 
+      <Route path="/products/:id" exact render={(routingInfo) => {
           return <SingleProduct id={routingInfo.match.params.id} />
-        }}
-      />  
-
+        }}/>
     </div>
   );
 }
