@@ -9,6 +9,7 @@ import Signup from './pages/Signup'
 import Login from './pages/Login'
 import AllProducts from './pages/AllProducts';
 import SingleProduct from './pages/SingleProduct';
+import Cart from './pages/Cart'
 
 function App() {
 const { userState, fetchUser } = useContext(UserContext)
@@ -45,6 +46,13 @@ const [user, setUser] = userState
       <Route path="/products/:id" exact render={(routingInfo) => {
           return <SingleProduct id={routingInfo.match.params.id} />
         }}/>
+      <Route path="/mycart" exact render={() => {
+        if (user.id) {
+          return <Cart />          
+        } else {
+          return <Redirect to="/" exact />         
+        }
+      }}/> 
     </div>
   );
 }

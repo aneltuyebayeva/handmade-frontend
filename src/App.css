@@ -23,13 +23,13 @@
 
 .navbar {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .navLinks a {
     padding: 20px;
     font-family: 'Philosopher', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     color: solid black;
     text-decoration: none;
 }
@@ -81,6 +81,7 @@
 .productName {
     margin-top: 40px;
     text-align: center;
+    font-family: 'Philosopher', sans-serif;
   }
 
 .allProductsButtonSection {
@@ -94,7 +95,7 @@
     height: 40px;
     width: 180px;
     font-family: 'Philosopher', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -113,11 +114,11 @@
 }
 
 .image {
-    margin-top: 20px;;
+    margin-top: 20px;
 }
 
 .singleRight {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -135,7 +136,7 @@
     height: 40px;
     width: 180px;
     font-family: 'Philosopher', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -147,7 +148,7 @@
     height: 40px;
     width: 200px;
     font-family: 'Philosopher', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -256,6 +257,89 @@
 
 .productName a {
     text-decoration: none;
+}
+
+.myCartList {
+    display: flex;
+    margin-top: 25px;
+    padding: 20px;
+
+    height: 100%;
+    width: 800px;
+}
+
+.cartProductImage {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    margin-bottom: 30px;;
+}
+
+.cartProductDescription {
+    margin: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.cartProductDescription a {
+    text-decoration: none;
+}
+
+.cartProductPrice {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-left: 300px;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.removeFromCartButton {
+    height: 40px;
+    width: 180px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.removeFromCartButton:hover {
+    background: rgb(204,220,193);
+}
+
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.cartEmpty {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.totalPrice {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.checkoutButton {
+    height: 40px;
+    width: 180px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkoutButton:hover {
+    background: rgb(204,220,193);
+}
+
+.checkoutCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

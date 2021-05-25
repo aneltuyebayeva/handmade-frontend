@@ -28,7 +28,7 @@ const SingleProduct = (props) => {
 
     const addToCart = (e) => {
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/carts`, {
-            productId: product.id
+            product_id: product.id
         },
             { headers: { 
                     Authorization: localStorage.getItem('userId')
