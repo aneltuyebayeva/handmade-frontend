@@ -10,6 +10,9 @@ import Login from './pages/Login'
 import AllProducts from './pages/AllProducts';
 import SingleProduct from './pages/SingleProduct';
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
+import MyOrders from './pages/MyOrders'
+import SingleOrder from './pages/SingleOrder'
 
 function App() {
 const { userState, fetchUser } = useContext(UserContext)
@@ -53,6 +56,18 @@ const [user, setUser] = userState
           return <Redirect to="/" exact />         
         }
       }}/> 
+        <Route
+        path="/mycart/checkout" exact render={() => {
+          if (user.id) {
+            return <Checkout />
+          } else {
+            return <Redirect to="/" exact /> 
+          }
+        }}/> 
+      <Route path="/myorders" exact render={() => {
+          return <MyOrders />
+        }}/> 
+      <Route path="/myorders/:id" exact component={SingleOrder}/>
     </div>
   );
 }

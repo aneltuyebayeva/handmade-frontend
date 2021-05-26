@@ -63,7 +63,7 @@ const Cart = (props) => {
                         )} >Remove from cart</button>
                         </div>
                         <div className="cartProductPrice">
-                            <span>$ {product.price}</span>
+                            $ {product.price}
                         </div>
                 </div>
             </div>
