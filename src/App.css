@@ -378,6 +378,29 @@
     font-size: 20px;
 }
 
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.checkoutForm input {
+    margin: 10px;
+}
+
+.submitCheckout {
+    height: 40px;
+    width: 180px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submitCheckout:hover {
+    background: rgb(204,220,193);
+}
 
 
 
