@@ -388,6 +388,9 @@
 
 .checkoutForm input {
     margin: 10px;
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
 }
 
 .submitCheckout {
