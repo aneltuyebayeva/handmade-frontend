@@ -57,6 +57,5 @@ const Checkout = (props) => {
         </form>
         </div>
     )
-    
 }
 export default Checkout
