@@ -36,6 +36,13 @@ const SingleProduct = (props) => {
           })
         .then((response) => {
             console.log(response)
+            if (localStorage.getItem(response.data.product.id)) {
+                let amount = parseInt(localStorage.getItem(response.data.product.id))
+                amount += 1
+                localStorage.setItem(response.data.product.id, amount)
+            } else {
+                localStorage.setItem(response.data.product.id, 1)
+            }
             console.log('added to cart')
         })
        }

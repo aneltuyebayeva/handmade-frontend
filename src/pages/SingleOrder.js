@@ -37,16 +37,13 @@ const SingleOrder= (props) => {
   
     const total = () => {
         let totalVal = 0;
-        console.log('PRODUCTS')
-        console.log(orders.products)
         if(orders.products){
           for (let i = 0; i < orders.products.length; i++) {
-            totalVal += parseInt(orders.products[i].price.replace('$', ''))
+            totalVal += parseInt(orders.products[i].price)
 
           }
         }
-
-        setCartTotal(totalVal);
+        setCartTotal(totalVal.toFixed(2));
       };
 
       useEffect(() => {

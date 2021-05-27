@@ -26,7 +26,7 @@ const Signup = () => {
 
     return (
       <div className="signupPage">
-        { shouldRedirect && <Redirect to={`/dashboard`} exact /> }
+        { shouldRedirect && <Redirect to={`/`} exact /> }
        
        <form className="signupForm" onSubmit={submitForm}>
           <div className="headerForm">

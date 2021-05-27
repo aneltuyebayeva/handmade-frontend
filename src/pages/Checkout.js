@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
-import { Redirect } from 'react-router'
+import { Redirect, Link } from 'react-router'
 import { UserContext } from '../context/UserContext'
 
 const Checkout = (props) => {
@@ -27,7 +27,9 @@ const Checkout = (props) => {
             Authorization: localStorage.getItem('userId')
           }
         }).then((response) => {
-          console.log(response.data);
+          console.log(response.data)
+
+          response.data.products.forEach(product => localStorage.removeItem(product.id))
           setShouldRedirect(response.data)
       })
 
@@ -35,6 +37,7 @@ const Checkout = (props) => {
 
     return (
         <div>
+          { shouldRedirect && <Redirect to={`/myorders`} exact /> }
             <form className="checkoutForm" onSubmit={handleSubmit}>
           
           <input name="address" placeholder="Address" value={order.address} onChange={handleChange} />

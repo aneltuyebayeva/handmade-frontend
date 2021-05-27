@@ -18,7 +18,6 @@ function App() {
 const { userState, fetchUser } = useContext(UserContext)
 const [user, setUser] = userState
 
-
   return (
     <div className="App">
       <Navbar />
