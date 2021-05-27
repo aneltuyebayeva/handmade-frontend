@@ -29,7 +29,7 @@ const Checkout = (props) => {
         }).then((response) => {
           console.log(response.data)
 
-          response.data.products.forEach(product => localStorage.removeItem(product.id))
+          // response.data.products.forEach(product => localStorage.removeItem(product.id))
           setShouldRedirect(response.data)
       })
 
