@@ -38,11 +38,13 @@ useEffect(() => {
                             console.log(response)
                             props.fetchAllCartItems()
                             localStorage.removeItem(props.product.id)
-                            
+
                         })
                         )} >Remove from cart</button>
                     </div>
-                    <input type="number" min="1" value = {quantity} onChange={(e) => handleChange(e, props.product.id)}/>
+                    <div className="cartProductQuantity">
+                    <input className="quantityProduct" type="number" min="1" value = {quantity} onChange={(e) => handleChange(e, props.product.id)}/>                        
+                    </div>
                     <div className="cartProductPrice">$ {(props.product.price*quantity).toFixed(2)}</div>
                 </div>
             </div>

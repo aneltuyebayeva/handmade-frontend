@@ -5,8 +5,14 @@ import { UserContext } from '../context/UserContext'
 
 const Checkout = (props) => {
     const [shouldRedirect, setShouldRedirect] = useState(null)
-    const { userState, fetchUser } = useContext(UserContext)
+    const { userState, fetchUser, productState } = useContext(UserContext)
     const [user, setUser] = userState
+    const [products, setProducts] = productState
+
+    useEffect (() => {
+      fetchUser()
+    },[])
+
     const [order, setOrder] = useState({
       address: '',
       credit_card: ''
@@ -22,14 +28,16 @@ const Checkout = (props) => {
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post(`${process.env.REACT_APP_BACKEND_URL}/orders`, order, {
+        let userProducts = products.map((product) => {
+        return {...product, quantity: localStorage.getItem(product.id)}})
+        console.log(userProducts)
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/orders`, {order, userProducts}, {
           headers: {
             Authorization: localStorage.getItem('userId')
           }
         }).then((response) => {
           console.log(response.data)
-
-          // response.data.products.forEach(product => localStorage.removeItem(product.id))
+          response.data.products.forEach(product => localStorage.removeItem(product.id))
           setShouldRedirect(response.data)
       })
 

@@ -39,7 +39,7 @@ const SingleOrder= (props) => {
         let totalVal = 0;
         if(orders.products){
           for (let i = 0; i < orders.products.length; i++) {
-            totalVal += parseInt(orders.products[i].price)
+            totalVal += parseFloat(orders.products[i].price*orders.products[i].quantity)
 
           }
         }
@@ -62,7 +62,9 @@ const SingleOrder= (props) => {
             <div className="cartProductImage"><Link to={`/products/${product.id}`}><img className='thumbnail' src={product.image}/></Link></div>
             <div className="productDetails">
                 <p>{product.name}</p>
-                <span>$ {product.price}</span>
+                <span>Price: ${product.price}</span> 
+                <span>Subtotal: $ {(product.price*product.quantity).toFixed(2)}</span>
+                <span>Quantity: {product.quantity}</span>
             </div>
           </div>
 

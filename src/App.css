@@ -294,7 +294,7 @@
     display: flex;
     align-items: center;
     margin: 10px;
-    margin-left: 260px;
+    margin-left: 170px;
     font-family: 'Philosopher', sans-serif;
     height: 150px;
     width: 150px;
@@ -365,6 +365,9 @@
 .productDetails {
     margin-left: 30px;
     font-family: 'Philosopher', sans-serif;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .orderHeader {
@@ -405,6 +408,19 @@
 
 .submitCheckout:hover {
     background: rgb(204,220,193);
+}
+
+.quantityProduct {
+    height: 20px;
+    width: 40px;
+}
+
+.cartProductQuantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
 }
 
 

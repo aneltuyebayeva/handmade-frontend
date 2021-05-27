@@ -26,19 +26,6 @@ const fetchAllCartItems = () => {
 
 useEffect(fetchAllCartItems, [])
 
-// const total = () => {
-//     let totalVal = 0.00;
-//     for (let i = 0; i < cartItems.length; i++) {
-//         totalVal += parseFloat(cartItems[i].price*localStorage.getItem(cartItems[i].id))
-//     }
-//         setCartTotal(totalVal.toFixed(2));
-// };
-
-// useEffect(() => {
-//     total();
-// }, [cartItems]);
-
-
 return (
     <div>
         {cartItems.length > 0 ? 
