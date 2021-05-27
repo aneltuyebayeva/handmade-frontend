@@ -28,8 +28,19 @@ const ProductsList = (props) => {
         allProducts.map((product) => {
           return <div className="singleProduct">
             <span key={product.id}>
+            {localStorage.getItem('userId') ?
+            <div>
             <div className="productImage"><Link to={`/products/${product.id}`}><img className='thumbnail' src={product.image}/></Link></div>
-            <div className="productName"><Link to={`/products/${product.id}`}>{product.name}</Link></div>
+            <div className="productName"><Link to={`/products/${product.id}`}>{product.name}</Link></div>              
+            </div>
+            
+            :
+            <div>
+            <div className="productImage"><Link to={'/login'}><img className='thumbnail' src={product.image}/></Link></div>
+            <div className="productName"><Link to={'/signup'}>{product.name}</Link></div>               
+            </div>
+ 
+            }
             </span>
           </div>
         })

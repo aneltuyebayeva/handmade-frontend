@@ -321,6 +321,8 @@
 
 .cartEmpty {
     font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .totalPrice {
