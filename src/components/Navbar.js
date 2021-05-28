@@ -27,6 +27,7 @@ return (
                 <Link to=" " onClick ={(e) => {
                     e.preventDefault()
                     localStorage.removeItem('userId')
+                    localStorage.clear()
                     setUser({})
                 }}>Logout</Link>
                 </span>

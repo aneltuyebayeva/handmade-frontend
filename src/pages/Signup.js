@@ -18,6 +18,7 @@ const Signup = () => {
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/users`, { name, email, password})
         .then((response) => {
             console.log(response)
+            console.log(response.data.user_id)
             localStorage.setItem('userId', response.data.user_id)
             fetchUser()
             setShouldRedirect(true)
