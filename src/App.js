@@ -46,7 +46,11 @@ const [user, setUser] = userState
         }
       }}/> 
       <Route path="/products/:id" exact render={(routingInfo) => {
-          return <SingleProduct id={routingInfo.match.params.id} />
+          if (user.id) {
+            return <SingleProduct id={routingInfo.match.params.id} />            
+          } else {
+            return <Redirect to="/" exact />
+          }
         }}/>
       <Route path="/mycart" exact render={() => {
         if (user.id) {
@@ -64,7 +68,11 @@ const [user, setUser] = userState
           }
         }}/> 
       <Route path="/myorders" exact render={() => {
+        if (user.id) {
           return <MyOrders />
+        } else {
+          return <Redirect to="/" exact /> 
+        }  
         }}/> 
       <Route path="/myorders/:id" exact component={SingleOrder}/>
     </div>

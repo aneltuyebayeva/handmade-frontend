@@ -423,5 +423,53 @@
     margin-left: 60px;
 }
 
+.noOrders {
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .homeSectionTop {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        width: 400px;
+    }
+    .logoHome {
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    }
+
+    .backgroundHome {
+        height: 400px;
+        width: 400px;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .homeSectionTop {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        height: 800px;
+        width: 800px;
+    }
+    .logoHome {
+    height: 400px;
+    width: 500px;
+    background-size: cover;
+    }
+
+    .backgroundHome {
+        height: 400px;
+        width: 500px;
+        background-size: cover;
+    }
+}
+
 
 

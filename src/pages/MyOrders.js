@@ -37,7 +37,7 @@ const MyOrders = (props) => {
 
         })
         :
-        <p>You don't have any orders yet..</p>
+        <p className="noOrders">You don't have any orders yet..</p>
       }
     </div>
   )
